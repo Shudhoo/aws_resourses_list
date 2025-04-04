@@ -1,53 +1,46 @@
-AWS Resource Monitoring Script
-About
-Hi everyone! This project showcases my learning in Linux OS and fundamentals of Linux, with a focus on shell scripting, which is crucial for DevOps and Cloud Engineers in daily tasks.
 
-This script helps you list AWS services running on your account, such as EC2, S3, RDS, Lambda, etc. It saves time by eliminating the need to manually check resources and compile reports. Instead of running multiple AWS CLI commands, this script provides all the necessary information in one go.
+# AWS Resources List Script
 
-Prerequisites
+So, hi everyone! This is my learning journey of Linux OS and Linux fundamentals. However, this script mainly focuses on shell scripting, which is highly important in a DevOps & Cloud Engineer’s daily tasks.
+
+This script helps you list AWS services running on your account, whether it's EC2, S3, RDS, Lambda, etc. It saves time by eliminating the need to manually check running resources and generate reports. Instead of running multiple AWS CLI commands, this script provides all the necessary information in one place.
+
+### Prerequisites
+
 Before running this script, ensure the following are set up:
 
-1️⃣ Install AWS CLI
-Run the following commands to install AWS CLI:
+1.) Install AWS CLI using the following commands:
 
-bash
-Copy
-Edit
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-2️⃣ Configure AWS CLI
-Set up AWS CLI with your credentials using:
+```bash
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
+```
+2.) Configure AWS CLI using the following command:
 
-bash
-Copy
-Edit
-aws configure
-🔹 For reference, visit the AWS CLI documentation.
+```bash
+   aws configure
+```
 
-How to Run the Script
-Simply execute the script using:
+For reference visit AWS CLI https://docs.aws.amazon.com/streams/latest/dev/setup-awscli.html
 
-bash
-Copy
-Edit
-./aws_resource_list.sh <aws_region> <aws_service>
-🔹 Example:
+After completing all these installations and configurations, you are all set to run this script on your system.
 
-bash
-Copy
-Edit
-./aws_resource_list.sh us-east-1 ec2
-Permissions
-This script is assigned 775 permissions, meaning:
+However, remember that this script can only be executed and cannot be modified by others. The user who created the script has set the permissions to read and execute only (755), meaning only the owner can edit it.
 
-Owner can read, write, and execute
+### How to Run the Script
 
-Group & Others can read and execute, but cannot modify
+``` bash 
+    ./aws_resource_list.sh <aws_region> <aws_service>
+```
 
-Only the creator can edit the script.
+Example
 
-Contributions & Support
-Feel free to use this script, but modifications require proper permissions.
+```bash
+   ./aws_resource_list.sh us-east-1 ec2
+```
 
-If you find issues or improvements, feel free to suggest them.
+
+
+
+
